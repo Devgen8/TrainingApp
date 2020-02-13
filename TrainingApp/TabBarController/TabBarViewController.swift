@@ -12,19 +12,26 @@ class TabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        //setupTabBarItems()
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+//    func setupTabBarItems() {
+//        let homeViewController = UINavigationController(rootViewController: HomeViewController())
+//        homeViewController.tabBarItem = UITabBarItem(title: "", image: #imageLiteral(resourceName: "house").withRenderingMode(.alwaysOriginal), tag: 0)
+//        homeViewController.navigationBar.topItem?.title = "Home"
+//
+//        let recipesViewController = UINavigationController(rootViewController: RecipesViewController())
+//        recipesViewController.tabBarItem = UITabBarItem(title: "", image:  #imageLiteral(resourceName: "recipe").withRenderingMode(.alwaysOriginal), tag: 1)
+//        recipesViewController.navigationBar.topItem?.title = "Recipes"
+//
+//        let shoppingListViewController = UINavigationController(rootViewController: ShoppingListViewController())
+//        shoppingListViewController.tabBarItem = UITabBarItem(title: "", image: #imageLiteral(resourceName: "checklist").withRenderingMode(.alwaysOriginal), tag: 2)
+//        shoppingListViewController.navigationBar.topItem?.title = "Shopping list"
+//
+//        let profileViewController = UINavigationController(rootViewController: ProfileViewController())
+//        profileViewController.tabBarItem = UITabBarItem(title: "", image: #imageLiteral(resourceName: "user").withRenderingMode(.alwaysOriginal), tag: 3)
+//        profileViewController.navigationBar.topItem?.title = "Profile"
+//
+//        viewControllers = [homeViewController, recipesViewController, shoppingListViewController, profileViewController]
+//    }
 }

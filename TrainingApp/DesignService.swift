@@ -21,14 +21,14 @@ class DesignService {
     static func styleFilledButton(_ button: UIButton) {
         button.backgroundColor = UIColor.systemGreen
         button.layer.cornerRadius = 25.0
-        button.tintColor = UIColor.white
+        button.tintColor = .white
     }
     
     static func styleHollowButton(_ button: UIButton) {
         button.layer.borderWidth = 2
         button.layer.borderColor = UIColor.white.cgColor
         button.layer.cornerRadius = 25.0
-        button.tintColor = UIColor.white
+        button.tintColor = .white
     }
     
 //    static func getCellsLayout() -> UICollectionViewFlowLayout {

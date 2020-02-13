@@ -15,7 +15,12 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        designScreenElements()
+    }
+    
+    func designScreenElements() {
+        DesignService.styleFilledButton(signInButton)
+        DesignService.styleHollowButton(signUpButton)
     }
     
     @IBAction func signInTapped(_ sender: UIButton) {

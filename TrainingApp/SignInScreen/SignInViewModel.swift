@@ -7,9 +7,20 @@
 //
 
 import Foundation
+import FirebaseFirestore
+import FirebaseAuth
 
 class SignInViewModel {
+    
+    let firestore = Firestore.firestore()
+    
     func authorizeUser(email: String, password: String, completion: @escaping (Bool) -> ()) {
-        // some authorization logic there
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            if error != nil {
+                completion(false)
+            } else {
+                completion(true)
+            }
+        }
     }
 }
