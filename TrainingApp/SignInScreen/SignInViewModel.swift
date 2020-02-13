@@ -10,6 +10,6 @@ import Foundation
 
 class SignInViewModel {
     func authorizeUser(email: String, password: String, completion: @escaping (Bool) -> ()) {
-        // some authorization logic
+        // some authorization logic there
     }
 }
