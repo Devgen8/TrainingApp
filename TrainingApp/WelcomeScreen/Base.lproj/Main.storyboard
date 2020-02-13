@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wRQ-RK-ciy">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="qO6-9N-RCY">
+            <objects>
+                <viewController id="wRQ-RK-ciy" customClass="WelcomeViewController" customModule="TrainingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TaN-G0-dAE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBJ-HM-BYh">
+                                <rect key="frame" x="50" y="692" width="314" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Hph-gg-AcT"/>
+                                </constraints>
+                                <state key="normal" title="Sign In"/>
+                                <connections>
+                                    <action selector="signInTapped:" destination="wRQ-RK-ciy" eventType="touchUpInside" id="Myf-e0-CQo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fH-OP-LcE">
+                                <rect key="frame" x="50" y="772" width="314" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="EGf-C4-OcG"/>
+                                </constraints>
+                                <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUpTapped:" destination="wRQ-RK-ciy" eventType="touchUpInside" id="GxR-qK-ejV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="TVF-2u-c5b" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="4fH-OP-LcE" secondAttribute="trailing" constant="50" id="8Qn-t2-BwC"/>
+                            <constraint firstItem="nBJ-HM-BYh" firstAttribute="centerX" secondItem="TVF-2u-c5b" secondAttribute="centerX" id="9vI-SC-lpg"/>
+                            <constraint firstItem="nBJ-HM-BYh" firstAttribute="leading" relation="lessThanOrEqual" secondItem="TVF-2u-c5b" secondAttribute="leading" constant="50" id="RVV-Q3-CjC"/>
+                            <constraint firstItem="TVF-2u-c5b" firstAttribute="bottom" secondItem="4fH-OP-LcE" secondAttribute="bottom" constant="40" id="eBy-Td-FtW"/>
+                            <constraint firstItem="TVF-2u-c5b" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="nBJ-HM-BYh" secondAttribute="trailing" constant="50" id="gp2-EM-21b"/>
+                            <constraint firstItem="4fH-OP-LcE" firstAttribute="centerX" secondItem="TVF-2u-c5b" secondAttribute="centerX" id="kMm-Js-TWz"/>
+                            <constraint firstItem="4fH-OP-LcE" firstAttribute="leading" relation="lessThanOrEqual" secondItem="TVF-2u-c5b" secondAttribute="leading" constant="50" id="vQU-yr-IkW"/>
+                            <constraint firstItem="4fH-OP-LcE" firstAttribute="top" secondItem="nBJ-HM-BYh" secondAttribute="bottom" constant="30" id="ycY-6f-Dwc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TVF-2u-c5b"/>
+                    </view>
+                    <connections>
+                        <outlet property="signInButton" destination="nBJ-HM-BYh" id="58q-ie-nUd"/>
+                        <outlet property="signUpButton" destination="4fH-OP-LcE" id="4O3-jd-5Ho"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xkb-Zi-tqX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="284" y="-7"/>
+        </scene>
+    </scenes>
+</document>
