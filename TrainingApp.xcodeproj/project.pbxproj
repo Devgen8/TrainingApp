@@ -22,6 +22,8 @@
 		24F95BE423F5581C002A92FD /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F95BE223F5581B002A92FD /* TabBarViewController.xib */; };
 		24F95BE823F55BD6002A92FD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F95BE623F55BD6002A92FD /* SignUpViewController.swift */; };
 		24F95BE923F55BD6002A92FD /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F95BE723F55BD6002A92FD /* SignUpViewController.xib */; };
+		24F95BEC23FAF01F002A92FD /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F95BEB23FAF01E002A92FD /* SignUpViewModel.swift */; };
+		24F95BEE23FB1356002A92FD /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F95BED23FB1356002A92FD /* FirebaseService.swift */; };
 		81839BA7E4DB31FAA8ECD106 /* Pods_TrainingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24247019D4A55FB3DC6168FE /* Pods_TrainingApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,8 @@
 		24F95BE223F5581B002A92FD /* TabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
 		24F95BE623F55BD6002A92FD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		24F95BE723F55BD6002A92FD /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		24F95BEB23FAF01E002A92FD /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		24F95BED23FB1356002A92FD /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		2FD19460FFC2435C62C524C4 /* Pods-TrainingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainingApp.release.xcconfig"; path = "Target Support Files/Pods-TrainingApp/Pods-TrainingApp.release.xcconfig"; sourceTree = "<group>"; };
 		70B737A677E15050CB9AB992 /* Pods-TrainingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainingApp.debug.xcconfig"; path = "Target Support Files/Pods-TrainingApp/Pods-TrainingApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +99,7 @@
 				248F2FCB23F404DE007C98B5 /* SceneDelegate.swift */,
 				24F95BDB23F4129E002A92FD /* DesignService.swift */,
 				24F95BDF23F54F28002A92FD /* GoogleService-Info.plist */,
+				24F95BED23FB1356002A92FD /* FirebaseService.swift */,
 				24F95BE523F55830002A92FD /* TabBarController */,
 				24F95BEA23F55BDC002A92FD /* SignUpScreen */,
 				247E2CD323F4083300B915E9 /* SignInScreen */,
@@ -128,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				24F95BE623F55BD6002A92FD /* SignUpViewController.swift */,
+				24F95BEB23FAF01E002A92FD /* SignUpViewModel.swift */,
 				24F95BE723F55BD6002A92FD /* SignUpViewController.xib */,
 			);
 			path = SignUpScreen;
@@ -273,7 +279,9 @@
 				248F2FDF23F405DB007C98B5 /* WelcomeViewController.swift in Sources */,
 				24F95BE823F55BD6002A92FD /* SignUpViewController.swift in Sources */,
 				24F95BDE23F41398002A92FD /* SignInViewModel.swift in Sources */,
+				24F95BEC23FAF01F002A92FD /* SignUpViewModel.swift in Sources */,
 				248F2FCA23F404DE007C98B5 /* AppDelegate.swift in Sources */,
+				24F95BEE23FB1356002A92FD /* FirebaseService.swift in Sources */,
 				24F95BE323F5581C002A92FD /* TabBarViewController.swift in Sources */,
 				248F2FCC23F404DE007C98B5 /* SceneDelegate.swift in Sources */,
 				24F95BDC23F4129E002A92FD /* DesignService.swift in Sources */,

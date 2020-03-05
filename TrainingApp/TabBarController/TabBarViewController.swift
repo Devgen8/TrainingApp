@@ -12,6 +12,7 @@ class TabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIApplication.shared.keyWindow?.rootViewController = self
         //setupTabBarItems()
     }
     

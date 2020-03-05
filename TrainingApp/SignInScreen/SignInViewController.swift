@@ -38,9 +38,9 @@ class SignInViewController: UIViewController {
         viewModel.authorizeUser(email: email, password: password) { [weak self] (permission) in
             guard let self = self else { return }
             if permission == true {
-                let tabBarViewController = TabBarViewController()
-                self.navigationController?.modalPresentationStyle = .fullScreen
-                self.present(tabBarViewController, animated: true)
+                let studentViewController = TabBarViewController()
+                studentViewController.modalPresentationStyle = .fullScreen
+                self.present(studentViewController, animated: true)
             } else {
                 self.showError("There is no such a user. Sign up, please")
             }

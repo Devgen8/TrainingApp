@@ -15,7 +15,7 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        designScreenElements()
+        //designScreenElements()
     }
     
     func designScreenElements() {
@@ -29,6 +29,7 @@ class WelcomeViewController: UIViewController {
     }
     
     @IBAction func signUpTapped(_ sender: UIButton) {
-        
+        let signUpViewController = SignUpViewController()
+        present(signUpViewController, animated: true)
     }
 }

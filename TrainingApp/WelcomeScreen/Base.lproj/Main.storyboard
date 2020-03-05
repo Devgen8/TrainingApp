@@ -20,7 +20,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Hph-gg-AcT"/>
                                 </constraints>
-                                <state key="normal" title="Sign In"/>
+                                <state key="normal" title="Вход"/>
                                 <connections>
                                     <action selector="signInTapped:" destination="wRQ-RK-ciy" eventType="touchUpInside" id="Myf-e0-CQo"/>
                                 </connections>
@@ -30,7 +30,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="EGf-C4-OcG"/>
                                 </constraints>
-                                <state key="normal" title="Sign Up"/>
+                                <state key="normal" title="Регистрация"/>
                                 <connections>
                                     <action selector="signUpTapped:" destination="wRQ-RK-ciy" eventType="touchUpInside" id="GxR-qK-ejV"/>
                                 </connections>
