@@ -6,6 +6,20 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-BoldItalic.otf">
+            <string>Montserrat-BoldItalic</string>
+        </array>
+        <array key="Montserrat-Medium.ttf">
+            <string>Montserrat-Medium</string>
+        </array>
+        <array key="Montserrat-MediumItalic.ttf">
+            <string>Montserrat-MediumItalic</string>
+        </array>
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpViewController" customModule="TrainingApp" customModuleProvider="target">
             <connections>
@@ -23,65 +37,52 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Регистрация" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8GQ-ha-rTq">
-                    <rect key="frame" x="132" y="92" width="150" height="48"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8GQ-ha-rTq">
+                    <rect key="frame" x="60" y="184" width="294" height="43"/>
+                    <fontDescription key="fontDescription" name="Montserrat-BoldItalic" family="Montserrat" pointSize="35"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="3EV-5i-gnI">
-                    <rect key="frame" x="50" y="192" width="314" height="310"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="3EV-5i-gnI">
+                    <rect key="frame" x="50" y="302" width="314" height="275"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gNT-o9-w5j">
                             <rect key="frame" x="5" y="0.0" width="304" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="Vxv-7g-44p"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Почта" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lgj-bG-hWH">
-                            <rect key="frame" x="5" y="65" width="304" height="50"/>
+                            <rect key="frame" x="5" y="75" width="304" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="ADk-iz-XIa"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nlJ-e2-fAf">
-                            <rect key="frame" x="5" y="130" width="304" height="50"/>
+                            <rect key="frame" x="5" y="150" width="304" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="25o-bc-ZDB"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Подтверждение пароля" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b5U-6e-8Gj">
-                            <rect key="frame" x="5" y="195" width="304" height="50"/>
+                            <rect key="frame" x="5" y="225" width="304" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="hYN-b0-53u"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                         </textField>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z43-98-Bzz">
-                            <rect key="frame" x="5" y="260" width="304" height="50"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="50" id="7QQ-fe-Ft9"/>
-                            </constraints>
-                            <state key="normal" title="Начать учиться!"/>
-                            <connections>
-                                <action selector="signUpTapped:" destination="-1" eventType="touchUpInside" id="PfP-Kg-S8r"/>
-                            </connections>
-                        </button>
                     </subviews>
                     <constraints>
                         <constraint firstItem="nlJ-e2-fAf" firstAttribute="leading" secondItem="3EV-5i-gnI" secondAttribute="leading" constant="5" id="E1L-lP-ePj"/>
                         <constraint firstAttribute="trailing" secondItem="b5U-6e-8Gj" secondAttribute="trailing" constant="5" id="Otn-A5-iOD"/>
-                        <constraint firstItem="z43-98-Bzz" firstAttribute="leading" secondItem="3EV-5i-gnI" secondAttribute="leading" constant="5" id="VNE-e3-bel"/>
                         <constraint firstItem="gNT-o9-w5j" firstAttribute="leading" secondItem="3EV-5i-gnI" secondAttribute="leading" constant="5" id="YST-zT-jvc"/>
-                        <constraint firstAttribute="trailing" secondItem="z43-98-Bzz" secondAttribute="trailing" constant="5" id="gsu-Vw-Ver"/>
                         <constraint firstAttribute="trailing" secondItem="gNT-o9-w5j" secondAttribute="trailing" constant="5" id="r9k-Q8-gfD"/>
                         <constraint firstAttribute="trailing" secondItem="lgj-bG-hWH" secondAttribute="trailing" constant="5" id="rLR-Ph-kyi"/>
                         <constraint firstItem="lgj-bG-hWH" firstAttribute="leading" secondItem="3EV-5i-gnI" secondAttribute="leading" constant="5" id="rfP-u4-Jki"/>
@@ -89,8 +90,21 @@
                         <constraint firstAttribute="trailing" secondItem="nlJ-e2-fAf" secondAttribute="trailing" constant="5" id="yTt-0Q-Rcc"/>
                     </constraints>
                 </stackView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ошибка" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4VE-QK-IbL">
-                    <rect key="frame" x="50" y="587" width="314" height="80"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z43-98-Bzz">
+                    <rect key="frame" x="68" y="657" width="278" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="YiC-B8-caU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="20"/>
+                    <state key="normal" title="Начать учиться!">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="signUpTapped:" destination="-1" eventType="touchUpInside" id="PfP-Kg-S8r"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ошибка" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4VE-QK-IbL">
+                    <rect key="frame" x="50" y="767" width="314" height="80"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="80" id="lT1-cP-fMl"/>
                     </constraints>
@@ -98,19 +112,51 @@
                     <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BBA-WH-otB">
+                    <rect key="frame" x="89" y="826" width="236" height="50"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Montazhnaya_oblast_98_4x" translatesAutoresizingMaskIntoConstraints="NO" id="aA2-ih-UwT">
+                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="ayl-5r-MVb"/>
+                                <constraint firstAttribute="width" secondItem="aA2-ih-UwT" secondAttribute="height" multiplier="1:1" id="poQ-0m-xxT"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="онлайн-школа webium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQ7-bB-lWQ">
+                            <rect key="frame" x="50" y="15.5" width="186" height="19"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="19" id="yT3-Nf-7p9"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Montserrat-MediumItalic" family="Montserrat" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="z43-98-Bzz" firstAttribute="top" secondItem="3EV-5i-gnI" secondAttribute="bottom" constant="80" id="3D3-46-zig"/>
+                <constraint firstItem="4VE-QK-IbL" firstAttribute="top" secondItem="z43-98-Bzz" secondAttribute="bottom" constant="40" id="4l1-oR-eyK"/>
+                <constraint firstAttribute="bottom" secondItem="BBA-WH-otB" secondAttribute="bottom" constant="20" id="8BN-hg-U5n"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="z43-98-Bzz" secondAttribute="trailing" constant="68" id="DUO-aj-q5f"/>
+                <constraint firstItem="BBA-WH-otB" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="F6O-Tb-Y0T"/>
                 <constraint firstItem="3EV-5i-gnI" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="JwW-1K-a0u"/>
                 <constraint firstItem="4VE-QK-IbL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="UHc-wv-JsT"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4VE-QK-IbL" secondAttribute="trailing" constant="50" id="bae-al-rDT"/>
-                <constraint firstItem="4VE-QK-IbL" firstAttribute="top" secondItem="3EV-5i-gnI" secondAttribute="bottom" constant="20" id="bln-eg-K0c"/>
-                <constraint firstItem="3EV-5i-gnI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="pU6-wr-asy"/>
+                <constraint firstItem="8GQ-ha-rTq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="cz5-em-0NS"/>
+                <constraint firstItem="3EV-5i-gnI" firstAttribute="top" secondItem="8GQ-ha-rTq" secondAttribute="bottom" constant="75" id="enZ-ch-qdU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8GQ-ha-rTq" secondAttribute="trailing" constant="60" id="hvZ-Jy-Zd1"/>
+                <constraint firstItem="z43-98-Bzz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="68" id="qhY-oc-60M"/>
                 <constraint firstItem="3EV-5i-gnI" firstAttribute="leading" relation="lessThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="r2c-a9-zZi"/>
+                <constraint firstItem="8GQ-ha-rTq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="140" id="wJm-MW-Gjc"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="3EV-5i-gnI" secondAttribute="trailing" constant="50" id="ylT-ZB-RC7"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="140.57971014492756" y="120.53571428571428"/>
         </view>
     </objects>
+    <resources>
+        <image name="Montazhnaya_oblast_98_4x" width="801" height="801"/>
+    </resources>
 </document>

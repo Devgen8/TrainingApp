@@ -22,9 +22,8 @@ class SignInViewController: UIViewController {
     }
     
     func designScreenElements() {
-        DesignService.styleTextField(emailTextField)
-        DesignService.styleTextField(passwordTextField)
-        DesignService.styleFilledButton(signInButton)
+        DesignService.setGradient(for: view)
+        DesignService.designBlueButton(signInButton)
         errorLabel.isHidden = true
     }
     

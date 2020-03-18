@@ -9,26 +9,23 @@
 import UIKit
 
 class DesignService {
-    static func styleTextField(_ textField: UITextField) {
-        let bottomLine = CALayer()
-        bottomLine.frame = CGRect(x: 0, y: textField.frame.height - 2, width: textField.frame.width, height: 2)
-        bottomLine.backgroundColor = UIColor.init(red: 48/255, green: 173/255, blue: 99/255, alpha: 1).cgColor
-        textField.borderStyle = .none
-        textField.layer.addSublayer(bottomLine)
-        textField.attributedPlaceholder = NSAttributedString(string: textField.placeholder ?? "Text", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+    static func designBlueButton(_ button: UIButton) {
+        button.backgroundColor = UIColor(displayP3Red: 0.0, green: 0.57, blue: 0.85, alpha: 0.66)
+        button.layer.cornerRadius = 30
     }
     
-    static func styleFilledButton(_ button: UIButton) {
-        button.backgroundColor = UIColor.systemGreen
-        button.layer.cornerRadius = 25.0
-        button.tintColor = .white
+    static func designWhiteButton(_ button: UIButton) {
+        button.backgroundColor = .white
+        button.layer.cornerRadius = 30
     }
     
-    static func styleHollowButton(_ button: UIButton) {
-        button.layer.borderWidth = 2
-        button.layer.borderColor = UIColor.white.cgColor
-        button.layer.cornerRadius = 25.0
-        button.tintColor = .white
+    static func setGradient(for view: UIView) {
+        view.setGradientBackground(firstColor: UIColor(displayP3Red: 0.0, green: 0.57, blue: 0.85, alpha: 1), secondColor: UIColor(displayP3Red: 0.41, green: 0.64, blue: 0.86, alpha: 0.12))
+    }
+    
+    static func designRedButton(_ button: UIButton) {
+        button.backgroundColor = UIColor(displayP3Red: 0.88, green: 0.23, blue: 0.23, alpha: 0.75)
+        button.layer.cornerRadius = 30
     }
     
 //    static func getCellsLayout() -> UICollectionViewFlowLayout {
