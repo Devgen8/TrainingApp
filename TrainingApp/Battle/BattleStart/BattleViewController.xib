@@ -10,10 +10,10 @@
         <array key="BlackDiamond.ttf">
             <string>BlackDiamond</string>
         </array>
-        <array key="Montserrat-Medium.ttf">
+        <array key="Montserrat-Medium.otf">
             <string>Montserrat-Medium</string>
         </array>
-        <array key="Montserrat-MediumItalic.ttf">
+        <array key="Montserrat-MediumItalic.otf">
             <string>Montserrat-MediumItalic</string>
         </array>
     </customFonts>
@@ -50,7 +50,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1f-lD-6bI">
-                    <rect key="frame" x="99.5" y="932.5" width="215" height="55"/>
+                    <rect key="frame" x="99.5" y="679.5" width="215" height="55"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="55" id="5Pi-hZ-dzf"/>
                         <constraint firstAttribute="width" constant="215" id="6KS-6b-iyy"/>
@@ -63,17 +63,20 @@
                         <action selector="playTapped:" destination="-1" eventType="touchUpInside" id="KxY-nn-pNK"/>
                     </connections>
                 </button>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="kvantovaya-fizika" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3zf-94-ljI">
-                    <rect key="frame" x="15" y="309" width="384" height="503"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="kvantovaya-fizika" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3zf-94-ljI">
+                    <rect key="frame" x="15" y="309" width="384" height="250"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="250" id="5jN-u9-Vby"/>
+                    </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="С Вами играет:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Rm-ke-MkK">
-                    <rect key="frame" x="10" y="822" width="394" height="29.5"/>
+                    <rect key="frame" x="10" y="569" width="394" height="29.5"/>
                     <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="25"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Екатерина" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wm7-gQ-ir8">
-                    <rect key="frame" x="10" y="861.5" width="394" height="41"/>
+                    <rect key="frame" x="10" y="608.5" width="394" height="41"/>
                     <fontDescription key="fontDescription" name="BlackDiamond" family="Black Diamond" pointSize="35"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>

@@ -8,3 +8,12 @@
 
 import Foundation
 
+protocol UnsolvedTaskUpdater {
+    func updateUnsolvedTasks(with tasks: [String:[String]])
+}
+
+protocol DataConstructer {
+    var unsolvedTasks: [String:[String]] { set get }
+    func constructData(for row: Int) -> String
+    func getItemsCount() -> Int
+}

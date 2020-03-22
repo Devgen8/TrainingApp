@@ -16,17 +16,20 @@ class BattleViewController: UIViewController {
     @IBOutlet weak var themeLabel: UILabel!
     @IBOutlet weak var playingWithYouLabel: UILabel!
     
-    var themes = ["Магнетизм","Электричество","Кинематика","Динамика","Статика"]
+    var viewModel = BattleViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         designScreen()
+        prepareData()
+        
     }
     
     func designScreen() {
         DesignService.setGradient(for: view)
         DesignService.designBlueButton(playButton)
-        themeOutlet.text = ""
+        themeOutlet.isHidden = true
         themeImage.isHidden = true
         themeImage.layer.cornerRadius = 30
         opponentsName.isHidden = true
@@ -34,13 +37,24 @@ class BattleViewController: UIViewController {
         playingWithYouLabel.alpha = 0
     }
     
+    func prepareData() {
+        viewModel.getTheme { [weak self] (theme, image) in
+            if let `self` = self, let theme = theme, let image = image {
+                self.themeOutlet.text = theme
+                self.themeImage.image = image
+            }
+        }
+        opponentsName.text = viewModel.getName()
+    }
+    
     func returnFirstState() {
+        prepareData()
         playButton.setTitle("Играть", for: .normal)
     }
     
     @IBAction func playTapped(_ sender: UIButton) {
         if playButton.titleLabel?.text == "Играть" {
-            themeOutlet.text = themes[Int.random(in: 0...4)]
+            themeOutlet.isHidden = false
             UIView.transition(with: themeOutlet, duration: 0.3, options: .transitionFlipFromLeft, animations: nil, completion: nil)
             themeImage.isHidden = false
             UIView.transition(with: themeImage, duration: 0.3, options: .transitionFlipFromLeft, animations: nil, completion: nil)

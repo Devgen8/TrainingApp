@@ -55,6 +55,9 @@
                     <state key="normal" title="Нерешенные задачи (20) ">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="unsolvedTasksTapped:" destination="-1" eventType="touchUpInside" id="QVi-ds-eqF"/>
+                    </connections>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qIP-Cc-SB0">
                     <rect key="frame" x="89" y="807" width="236" height="50"/>

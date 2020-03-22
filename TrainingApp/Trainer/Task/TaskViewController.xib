@@ -26,7 +26,6 @@
                 <outlet property="answerTextField" destination="Y2T-NJ-5YG" id="4Qo-6y-YJv"/>
                 <outlet property="checkButton" destination="FS1-W8-Hl8" id="aBI-JP-Hc4"/>
                 <outlet property="resultLabel" destination="98P-7C-3VD" id="IDR-Au-EC5"/>
-                <outlet property="skipButton" destination="VBA-fO-Qb7" id="Ha8-wb-CTU"/>
                 <outlet property="taskImage" destination="Hte-4a-1UW" id="DGn-t5-a2C"/>
                 <outlet property="taskNumberLabel" destination="naX-sI-aba" id="S7p-aH-wz4"/>
                 <outlet property="themeLabel" destination="X9A-9U-54q" id="wde-aG-dd3"/>
@@ -101,28 +100,16 @@
                         <action selector="checkTapped:" destination="-1" eventType="touchUpInside" id="Wd0-iJ-TQS"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Правильно +1 балл" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98P-7C-3VD">
-                    <rect key="frame" x="97" y="473" width="220" height="61"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Правильно +1 балл" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98P-7C-3VD">
+                    <rect key="frame" x="97" y="473" width="220" height="150"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="220" id="5g1-za-gBm"/>
+                        <constraint firstAttribute="height" constant="150" id="NLB-kD-9rj"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Montserrat-Black" family="Montserrat" pointSize="25"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBA-fO-Qb7">
-                    <rect key="frame" x="80" y="639" width="254" height="60"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="60" id="8JI-cA-DN4"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="20"/>
-                    <state key="normal" title="Пропустить">
-                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                    <connections>
-                        <action selector="skipTapped:" destination="-1" eventType="touchUpInside" id="VMa-e1-Rv7"/>
-                    </connections>
-                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Есть ошибка в задаче? Напиши нам!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPJ-yL-zkn">
                     <rect key="frame" x="113" y="714" width="188" height="42"/>
                     <constraints>
@@ -164,6 +151,9 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="gMG-D7-dq1"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -176,7 +166,6 @@
                 <constraint firstItem="FS1-W8-Hl8" firstAttribute="top" secondItem="Hte-4a-1UW" secondAttribute="bottom" constant="15" id="GIc-qY-sDh"/>
                 <constraint firstItem="X9A-9U-54q" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="70" id="GwV-w9-Tz8"/>
                 <constraint firstItem="aqR-fY-bwb" firstAttribute="top" secondItem="xPJ-yL-zkn" secondAttribute="bottom" constant="10" id="IhI-RI-abu"/>
-                <constraint firstItem="xPJ-yL-zkn" firstAttribute="top" secondItem="VBA-fO-Qb7" secondAttribute="bottom" constant="15" id="KJ4-1E-JzK"/>
                 <constraint firstItem="aqR-fY-bwb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="OvS-VK-Flo"/>
                 <constraint firstItem="98P-7C-3VD" firstAttribute="top" secondItem="Y2T-NJ-5YG" secondAttribute="bottom" constant="40" id="TXB-Rh-J3S"/>
                 <constraint firstItem="xPJ-yL-zkn" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="XCM-xQ-MWg"/>
@@ -186,13 +175,11 @@
                 <constraint firstItem="Hte-4a-1UW" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="cZi-2L-Jxh"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FS1-W8-Hl8" secondAttribute="trailing" constant="10" id="dfW-4l-Qhe"/>
                 <constraint firstItem="naX-sI-aba" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="fTt-T4-h76"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VBA-fO-Qb7" secondAttribute="trailing" constant="80" id="fo8-cR-tH3"/>
                 <constraint firstItem="NOK-fu-Sx2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="mbh-Ui-acY"/>
                 <constraint firstItem="PKE-SM-q1Z" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="oap-O8-dV6"/>
                 <constraint firstItem="Y2T-NJ-5YG" firstAttribute="top" secondItem="Hte-4a-1UW" secondAttribute="bottom" constant="20" id="pOO-Mf-hfB"/>
                 <constraint firstItem="Y2T-NJ-5YG" firstAttribute="leading" secondItem="PKE-SM-q1Z" secondAttribute="trailing" constant="15" id="tX5-xX-DeU"/>
                 <constraint firstItem="98P-7C-3VD" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="tit-v9-OGK"/>
-                <constraint firstItem="VBA-fO-Qb7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="80" id="wtO-95-3I5"/>
                 <constraint firstItem="FS1-W8-Hl8" firstAttribute="leading" secondItem="Y2T-NJ-5YG" secondAttribute="trailing" constant="15" id="yZl-bY-eJq"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

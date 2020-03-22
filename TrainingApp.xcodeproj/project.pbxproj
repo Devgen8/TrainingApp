@@ -21,6 +21,13 @@
 		2458FD6924210A130095E65F /* FormSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2458FD6724210A130095E65F /* FormSheetViewController.xib */; };
 		2458FD6C242207800095E65F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458FD6A2422077F0095E65F /* ProfileViewController.swift */; };
 		2458FD6D242207800095E65F /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2458FD6B242207800095E65F /* ProfileViewController.xib */; };
+		2458FD7024225F550095E65F /* TrainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458FD6F24225F550095E65F /* TrainerViewModel.swift */; };
+		2458FD72242260520095E65F /* TrainerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458FD71242260520095E65F /* TrainerModel.swift */; };
+		2458FD7524227C920095E65F /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458FD7424227C920095E65F /* TaskViewModel.swift */; };
+		2458FD7724227D730095E65F /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458FD7624227D730095E65F /* TaskModel.swift */; };
+		2458FD7A2423C3210095E65F /* TasksListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458FD782423C3200095E65F /* TasksListViewController.swift */; };
+		2458FD7B2423C3210095E65F /* TasksListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2458FD792423C3200095E65F /* TasksListViewController.xib */; };
+		2458FD7D2423C5290095E65F /* TasksListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458FD7C2423C5280095E65F /* TasksListViewModel.swift */; };
 		247E2CD123F4082A00B915E9 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247E2CCF23F4082A00B915E9 /* SignInViewController.swift */; };
 		247E2CD223F4082A00B915E9 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247E2CD023F4082A00B915E9 /* SignInViewController.xib */; };
 		248F2FCA23F404DE007C98B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248F2FC923F404DE007C98B5 /* AppDelegate.swift */; };
@@ -83,6 +90,12 @@
 		24F95C1D24112A86002A92FD /* BattleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F95C1B24112A85002A92FD /* BattleViewController.swift */; };
 		24F95C1E24112A86002A92FD /* BattleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F95C1C24112A85002A92FD /* BattleViewController.xib */; };
 		24F95C2124113B46002A92FD /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F95C2024113B45002A92FD /* UIViewExtension.swift */; };
+		24FBF0002427374000BBB638 /* UnsolvedThemesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FBEFFE2427374000BBB638 /* UnsolvedThemesViewController.swift */; };
+		24FBF0012427374000BBB638 /* UnsolvedThemesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24FBEFFF2427374000BBB638 /* UnsolvedThemesViewController.xib */; };
+		24FBF0032427381500BBB638 /* UnsolvedThemesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FBF0022427381500BBB638 /* UnsolvedThemesViewModel.swift */; };
+		24FBF005242744D500BBB638 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FBF004242744D500BBB638 /* Animations.swift */; };
+		24FBF00724275B0100BBB638 /* UnsolvedTasksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FBF00624275B0100BBB638 /* UnsolvedTasksViewModel.swift */; };
+		24FBF0092427818600BBB638 /* BattleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FBF0082427818600BBB638 /* BattleViewModel.swift */; };
 		81839BA7E4DB31FAA8ECD106 /* Pods_TrainingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24247019D4A55FB3DC6168FE /* Pods_TrainingApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +115,13 @@
 		2458FD6724210A130095E65F /* FormSheetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormSheetViewController.xib; sourceTree = "<group>"; };
 		2458FD6A2422077F0095E65F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = "../New Group/ProfileViewController.swift"; sourceTree = "<group>"; };
 		2458FD6B242207800095E65F /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		2458FD6F24225F550095E65F /* TrainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerViewModel.swift; sourceTree = "<group>"; };
+		2458FD71242260520095E65F /* TrainerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerModel.swift; sourceTree = "<group>"; };
+		2458FD7424227C920095E65F /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		2458FD7624227D730095E65F /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		2458FD782423C3200095E65F /* TasksListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksListViewController.swift; sourceTree = "<group>"; };
+		2458FD792423C3200095E65F /* TasksListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TasksListViewController.xib; sourceTree = "<group>"; };
+		2458FD7C2423C5280095E65F /* TasksListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksListViewModel.swift; sourceTree = "<group>"; };
 		247E2CCF23F4082A00B915E9 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		247E2CD023F4082A00B915E9 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		248F2FC623F404DE007C98B5 /* TrainingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,6 +186,12 @@
 		24F95C1B24112A85002A92FD /* BattleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleViewController.swift; sourceTree = "<group>"; };
 		24F95C1C24112A85002A92FD /* BattleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BattleViewController.xib; sourceTree = "<group>"; };
 		24F95C2024113B45002A92FD /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		24FBEFFE2427374000BBB638 /* UnsolvedThemesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsolvedThemesViewController.swift; sourceTree = "<group>"; };
+		24FBEFFF2427374000BBB638 /* UnsolvedThemesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnsolvedThemesViewController.xib; sourceTree = "<group>"; };
+		24FBF0022427381500BBB638 /* UnsolvedThemesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsolvedThemesViewModel.swift; sourceTree = "<group>"; };
+		24FBF004242744D500BBB638 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		24FBF00624275B0100BBB638 /* UnsolvedTasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsolvedTasksViewModel.swift; sourceTree = "<group>"; };
+		24FBF0082427818600BBB638 /* BattleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleViewModel.swift; sourceTree = "<group>"; };
 		2FD19460FFC2435C62C524C4 /* Pods-TrainingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainingApp.release.xcconfig"; path = "Target Support Files/Pods-TrainingApp/Pods-TrainingApp.release.xcconfig"; sourceTree = "<group>"; };
 		70B737A677E15050CB9AB992 /* Pods-TrainingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainingApp.debug.xcconfig"; path = "Target Support Files/Pods-TrainingApp/Pods-TrainingApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -185,13 +211,15 @@
 		2458FD56241F63C80095E65F /* Trainer */ = {
 			isa = PBXGroup;
 			children = (
-				2458FD52241F63BF0095E65F /* TrainerViewController.swift */,
-				2458FD53241F63BF0095E65F /* TrainerViewController.xib */,
-				2458FD5C241F805E0095E65F /* TaskViewController.swift */,
-				2458FD5D241F805E0095E65F /* TaskViewController.xib */,
-				2458FD602420E8A70095E65F /* ImagePreviewViewController.swift */,
-				2458FD612420E8A80095E65F /* ImagePreviewViewController.xib */,
+				2458FD7324227C530095E65F /* TrainerStart */,
+				2458FD7E2423E2F90095E65F /* TasksList */,
+				24FBEFFC24267DE200BBB638 /* Task */,
+				24FBEFFD24267E0D00BBB638 /* ImagePreview */,
 				2458FD642420F8D20095E65F /* ImageScrollView.swift */,
+				24FBEFFE2427374000BBB638 /* UnsolvedThemesViewController.swift */,
+				24FBF0022427381500BBB638 /* UnsolvedThemesViewModel.swift */,
+				24FBF00624275B0100BBB638 /* UnsolvedTasksViewModel.swift */,
+				24FBEFFF2427374000BBB638 /* UnsolvedThemesViewController.xib */,
 				2458FD6624210A130095E65F /* FormSheetViewController.swift */,
 				2458FD6724210A130095E65F /* FormSheetViewController.xib */,
 			);
@@ -214,6 +242,27 @@
 				2458FD6B242207800095E65F /* ProfileViewController.xib */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		2458FD7324227C530095E65F /* TrainerStart */ = {
+			isa = PBXGroup;
+			children = (
+				2458FD52241F63BF0095E65F /* TrainerViewController.swift */,
+				2458FD6F24225F550095E65F /* TrainerViewModel.swift */,
+				2458FD71242260520095E65F /* TrainerModel.swift */,
+				2458FD53241F63BF0095E65F /* TrainerViewController.xib */,
+			);
+			path = TrainerStart;
+			sourceTree = "<group>";
+		};
+		2458FD7E2423E2F90095E65F /* TasksList */ = {
+			isa = PBXGroup;
+			children = (
+				2458FD782423C3200095E65F /* TasksListViewController.swift */,
+				2458FD7C2423C5280095E65F /* TasksListViewModel.swift */,
+				2458FD792423C3200095E65F /* TasksListViewController.xib */,
+			);
+			path = TasksList;
 			sourceTree = "<group>";
 		};
 		247E2CD323F4083300B915E9 /* SignInScreen */ = {
@@ -250,6 +299,7 @@
 				248F2FC923F404DE007C98B5 /* AppDelegate.swift */,
 				248F2FCB23F404DE007C98B5 /* SceneDelegate.swift */,
 				24F95BDB23F4129E002A92FD /* DesignService.swift */,
+				24FBF004242744D500BBB638 /* Animations.swift */,
 				24F95BDF23F54F28002A92FD /* GoogleService-Info.plist */,
 				24F95BED23FB1356002A92FD /* FirebaseService.swift */,
 				24F95C2024113B45002A92FD /* UIViewExtension.swift */,
@@ -346,14 +396,43 @@
 		24F95C1F24112A9A002A92FD /* Battle */ = {
 			isa = PBXGroup;
 			children = (
-				24F95C1B24112A85002A92FD /* BattleViewController.swift */,
-				24F95C1C24112A85002A92FD /* BattleViewController.xib */,
+				24FBF00C242798E100BBB638 /* BattleStart */,
 				24964379241BE5F100DC377C /* AnswerChooserViewController.swift */,
 				2496437A241BE5F100DC377C /* AnswerChooserViewController.xib */,
 				2496437E241F417900DC377C /* BattleFinalViewController.swift */,
 				2496437F241F417900DC377C /* BattleFinalViewController.xib */,
 			);
 			path = Battle;
+			sourceTree = "<group>";
+		};
+		24FBEFFC24267DE200BBB638 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				2458FD5C241F805E0095E65F /* TaskViewController.swift */,
+				2458FD7424227C920095E65F /* TaskViewModel.swift */,
+				2458FD7624227D730095E65F /* TaskModel.swift */,
+				2458FD5D241F805E0095E65F /* TaskViewController.xib */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		24FBEFFD24267E0D00BBB638 /* ImagePreview */ = {
+			isa = PBXGroup;
+			children = (
+				2458FD602420E8A70095E65F /* ImagePreviewViewController.swift */,
+				2458FD612420E8A80095E65F /* ImagePreviewViewController.xib */,
+			);
+			path = ImagePreview;
+			sourceTree = "<group>";
+		};
+		24FBF00C242798E100BBB638 /* BattleStart */ = {
+			isa = PBXGroup;
+			children = (
+				24F95C1B24112A85002A92FD /* BattleViewController.swift */,
+				24FBF0082427818600BBB638 /* BattleViewModel.swift */,
+				24F95C1C24112A85002A92FD /* BattleViewController.xib */,
+			);
+			path = BattleStart;
 			sourceTree = "<group>";
 		};
 		B23FC0EE0F50A04E01189BE3 /* Frameworks */ = {
@@ -453,6 +532,7 @@
 				2496437C241BE5F100DC377C /* AnswerChooserViewController.xib in Resources */,
 				2496435E2413B37700DC377C /* Montserrat-Regular.ttf in Resources */,
 				249643622413B37700DC377C /* Montserrat-Black.ttf in Resources */,
+				24FBF0012427374000BBB638 /* UnsolvedThemesViewController.xib in Resources */,
 				24964381241F417A00DC377C /* BattleFinalViewController.xib in Resources */,
 				2458FD5A241F728F0095E65F /* ThemeTableViewCell.xib in Resources */,
 				2496435D2413B37700DC377C /* Montserrat-SemiBold.otf in Resources */,
@@ -469,6 +549,7 @@
 				249643642413B37700DC377C /* Montserrat-ThinItalic.otf in Resources */,
 				2496436C2413B37800DC377C /* Montserrat-ExtraLight.ttf in Resources */,
 				2496436D2413B37800DC377C /* Montserrat-Medium.otf in Resources */,
+				2458FD7B2423C3210095E65F /* TasksListViewController.xib in Resources */,
 				2458FD6D242207800095E65F /* ProfileViewController.xib in Resources */,
 				249643722413B37800DC377C /* Montserrat-ExtraBoldItalic.ttf in Resources */,
 				248F2FD623F404EE007C98B5 /* LaunchScreen.storyboard in Resources */,
@@ -539,22 +620,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24FBF0032427381500BBB638 /* UnsolvedThemesViewModel.swift in Sources */,
 				2458FD51241F59AD0095E65F /* CustomProtocols.swift in Sources */,
+				2458FD7A2423C3210095E65F /* TasksListViewController.swift in Sources */,
 				247E2CD123F4082A00B915E9 /* SignInViewController.swift in Sources */,
+				24FBF0002427374000BBB638 /* UnsolvedThemesViewController.swift in Sources */,
 				248F2FDF23F405DB007C98B5 /* WelcomeViewController.swift in Sources */,
+				2458FD72242260520095E65F /* TrainerModel.swift in Sources */,
+				2458FD7D2423C5290095E65F /* TasksListViewModel.swift in Sources */,
 				24F95BE823F55BD6002A92FD /* SignUpViewController.swift in Sources */,
 				24F95C1D24112A86002A92FD /* BattleViewController.swift in Sources */,
 				24F95BDE23F41398002A92FD /* SignInViewModel.swift in Sources */,
 				2458FD6C242207800095E65F /* ProfileViewController.swift in Sources */,
 				24964380241F417A00DC377C /* BattleFinalViewController.swift in Sources */,
 				24F95BEC23FAF01F002A92FD /* SignUpViewModel.swift in Sources */,
+				2458FD7724227D730095E65F /* TaskModel.swift in Sources */,
 				24F95C2124113B46002A92FD /* UIViewExtension.swift in Sources */,
+				24FBF005242744D500BBB638 /* Animations.swift in Sources */,
 				248F2FCA23F404DE007C98B5 /* AppDelegate.swift in Sources */,
+				2458FD7024225F550095E65F /* TrainerViewModel.swift in Sources */,
 				2458FD622420E8A80095E65F /* ImagePreviewViewController.swift in Sources */,
 				2458FD54241F63BF0095E65F /* TrainerViewController.swift in Sources */,
 				24F95BEE23FB1356002A92FD /* FirebaseService.swift in Sources */,
 				24F95BE323F5581C002A92FD /* TabBarViewController.swift in Sources */,
 				2458FD6824210A130095E65F /* FormSheetViewController.swift in Sources */,
+				2458FD7524227C920095E65F /* TaskViewModel.swift in Sources */,
+				24FBF00724275B0100BBB638 /* UnsolvedTasksViewModel.swift in Sources */,
+				24FBF0092427818600BBB638 /* BattleViewModel.swift in Sources */,
 				2496437B241BE5F100DC377C /* AnswerChooserViewController.swift in Sources */,
 				2458FD59241F728F0095E65F /* ThemeTableViewCell.swift in Sources */,
 				248F2FCC23F404DE007C98B5 /* SceneDelegate.swift in Sources */,
