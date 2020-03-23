@@ -21,17 +21,13 @@ class AnswerChooserViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet var opponentsLetters: [UILabel]!
     
+    var viewModel = AnswerChooserViewModel()
+    
     let clock = CAShapeLayer()
-    let answerDuration = 15.0
-    var currentDuration = 15.0
+    let answerDuration = 30.0
+    var currentDuration = 30.0
     let timeDifference = 0.01
     var timer = Timer()
-    var questionNumber = 0
-    var answers = [["100 км/ч", "50 км/ч", "150 км/ч", "30 км/ч"], ["40 км/ч", "60 км/ч", "70 км/ч", "80 км/ч"]]
-    var rightAnswer = "100 км/ч"
-    var computersAnswer = "50 км/ч"
-    var userAnswers = [1, 1, 1, 1, 1]
-    var opponensAnswers = [1, 1, 1, 1, 1]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,14 +35,16 @@ class AnswerChooserViewController: UIViewController {
         designScreen()
         questionUpdate()
         startClockAnimation()
-        prepareData()
     }
     
     func prepareData() {
-        questionImage.image = questionNumber == 0 ? #imageLiteral(resourceName: "pic39") : #imageLiteral(resourceName: "unnamed")
+        viewModel.generateOpponentsAnswer()
+        opponentsNameLabel.text = viewModel.getOpponentsName()
+        questionImage.image = viewModel.getQuestionImage()
         var count = 0
+        let answers = viewModel.getAnswers()
         for button in answerButtons {
-            button.setTitle(answers[questionNumber][count], for: .normal)
+            button.setTitle("\(answers[count])", for: .normal)
             count += 1
         }
     }
@@ -60,25 +58,26 @@ class AnswerChooserViewController: UIViewController {
             self.timeLabel.text = "\(Int(self.currentDuration))"
             if self.currentDuration <= 0 {
                 self.timer.invalidate()
-                self.userAnswerImages[self.questionNumber].image = #imageLiteral(resourceName: "close")
-                self.userAnswers[self.questionNumber] = 0
+                self.userAnswerImages[self.viewModel.taskNumber].image = #imageLiteral(resourceName: "close")
+                self.viewModel.updateUserAnswers(with: false)
+                self.showOpponentsAnswer()
                 self.showRightAnswer()
             }
         }
     }
     
     func showRightAnswer() {
-        if rightAnswer != computersAnswer {
-            opponentsAnswerImages[questionNumber].image = #imageLiteral(resourceName: "close")
-            opponensAnswers[questionNumber] = 0
+        let isWright = viewModel.checkOpponentsAnswer()
+        if !isWright {
+            opponentsAnswerImages[viewModel.taskNumber].image = #imageLiteral(resourceName: "close")
         }
         UIView.animate(withDuration: 1.5) {
             self.nextButton.alpha = 1
-            self.opponentsAnswerImages[self.questionNumber].alpha = 1
-            self.userAnswerImages[self.questionNumber].alpha = 1
+            self.opponentsAnswerImages[self.viewModel.taskNumber].alpha = 1
+            self.userAnswerImages[self.viewModel.taskNumber].alpha = 1
         }
         for button in answerButtons {
-            if button.titleLabel?.text == rightAnswer {
+            if viewModel.checkAnswer(button.titleLabel?.text ?? "") == true {
                 button.layer.borderWidth = 5
                 button.layer.borderColor = UIColor.green.cgColor
                 UIView.animate(withDuration: 1) {
@@ -105,9 +104,7 @@ class AnswerChooserViewController: UIViewController {
     }
     
     func questionUpdate() {
-        questionNumberLabel.text = "Вопрос \(questionNumber + 1)/5"
-        rightAnswer = answers[questionNumber][0]
-        computersAnswer = answers[questionNumber][1]
+        questionNumberLabel.text = "Вопрос \(viewModel.taskNumber + 1)/\(viewModel.questions.count)"
         for button in answerButtons {
             button.layer.borderWidth = 0
             button.backgroundColor = .white
@@ -147,9 +144,21 @@ class AnswerChooserViewController: UIViewController {
     }
     @IBAction func userAnswered(_ sender: UIButton) {
         timer.invalidate()
+        showOpponentsAnswer()
+        if viewModel.checkAnswer(sender.titleLabel?.text ?? "") == false {
+            sender.backgroundColor = .red
+            userAnswerImages[viewModel.taskNumber].image = #imageLiteral(resourceName: "close")
+            viewModel.updateUserAnswers(with: false)
+        } else {
+            viewModel.updateUserAnswers(with: true)
+        }
+        showRightAnswer()
+    }
+    
+    func showOpponentsAnswer() {
         var labelNumber = 0
         for button in answerButtons {
-            if computersAnswer == button.titleLabel?.text {
+            if viewModel.computerAnswer == button.titleLabel?.text {
                 UIView.animate(withDuration: 1.5) {
                     let letter = self.opponentsNameLabel.text?.first
                     self.opponentsLetters[labelNumber].text = String([(letter ?? "O"), "."])
@@ -158,23 +167,19 @@ class AnswerChooserViewController: UIViewController {
             }
             labelNumber += 1
         }
-        if sender.titleLabel?.text != rightAnswer {
-            sender.backgroundColor = .red
-            userAnswerImages[questionNumber].image = #imageLiteral(resourceName: "close")
-            userAnswers[questionNumber] = 0
-        }
-        showRightAnswer()
     }
     
     @IBAction func nextTapped(_ sender: UIButton) {
-        if questionNumber == 1 {
+        if viewModel.taskNumber == viewModel.questions.count - 1 {
             let battleFinalViewController = BattleFinalViewController()
-            battleFinalViewController.userAnswers = userAnswers
-            battleFinalViewController.opponentsAnswers = opponensAnswers
+            battleFinalViewController.viewModel.userAnswers = viewModel.userAnswers
+            battleFinalViewController.viewModel.opponentsAnswers = viewModel.opponentsAnswers
+            battleFinalViewController.viewModel.opponentsName = viewModel.opponentsName
+            battleFinalViewController.viewModel.numberOfPlays = viewModel.numberOfPlays
             battleFinalViewController.modalPresentationStyle = .fullScreen
             present(battleFinalViewController, animated: true)
         } else {
-            questionNumber += 1
+            viewModel.updateQuestionNumber()
             questionUpdate()
         }
     }

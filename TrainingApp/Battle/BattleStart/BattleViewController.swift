@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class BattleViewController: UIViewController {
     @IBOutlet weak var themeOutlet: UILabel!
@@ -53,6 +54,10 @@ class BattleViewController: UIViewController {
     }
     
     @IBAction func playTapped(_ sender: UIButton) {
+        guard viewModel.checkPermissionToPlay() == true else {
+            present(GamesNumberAlertViewController(), animated: true)
+            return
+        }
         if playButton.titleLabel?.text == "Играть" {
             themeOutlet.isHidden = false
             UIView.transition(with: themeOutlet, duration: 0.3, options: .transitionFlipFromLeft, animations: nil, completion: nil)
@@ -66,11 +71,12 @@ class BattleViewController: UIViewController {
                 self.playButton.setTitle("Поехали!", for: .normal)
             }
         } else {
-            designScreen()
-            returnFirstState()
             let answerChooserViewController = AnswerChooserViewController()
+            viewModel.transportDataTo(viewModel: answerChooserViewController.viewModel)
             answerChooserViewController.modalPresentationStyle = .fullScreen
             present(answerChooserViewController, animated: true)
+            designScreen()
+            returnFirstState()
         }
     }
 }

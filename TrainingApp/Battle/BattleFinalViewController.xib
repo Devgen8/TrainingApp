@@ -25,6 +25,7 @@
             <connections>
                 <outlet property="finishButton" destination="n3I-Go-Wgy" id="epj-z1-gzb"/>
                 <outlet property="gamesNumberLabel" destination="6hm-Cg-19t" id="pHb-Fp-LKK"/>
+                <outlet property="opponentsNameLabel" destination="tmq-Sw-smp" id="YKm-J1-OTd"/>
                 <outlet property="resultLabel" destination="EkR-uz-U1F" id="Mwp-JW-D4T"/>
                 <outlet property="scoreLabel" destination="MuB-O3-AqC" id="rfc-kw-uYf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -166,9 +167,9 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Победа +10 баллов" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EkR-uz-U1F">
-                    <rect key="frame" x="116" y="436" width="182" height="73.5"/>
+                    <rect key="frame" x="97" y="436" width="220" height="73.5"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="182" id="D9M-gs-Dj3"/>
+                        <constraint firstAttribute="width" constant="220" id="D9M-gs-Dj3"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Montserrat-Black" family="Montserrat" pointSize="30"/>
                     <nil key="textColor"/>

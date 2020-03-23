@@ -57,7 +57,8 @@ extension TasksListViewController: UITableViewDataSource {
         let cell = Bundle.main.loadNibNamed("ThemeTableViewCell", owner: self, options: nil)?.first as! ThemeTableViewCell
         let taskName = viewModel.tasks[indexPath.row].name
         cell.themeName.text = taskName
-        if viewModel.usersSolvedTasks.filter({ $0 == taskName }).count > 0 {
+        let isTaskSolved = viewModel.usersSolvedTasks[viewModel.theme ?? ""]?.filter({ $0 == taskName }).count ?? 0 > 0
+        if isTaskSolved, !(viewModel.lookingForUnsolvedTasks ?? false) {
             cell.tickImage.image = #imageLiteral(resourceName: "checked")
         }
         

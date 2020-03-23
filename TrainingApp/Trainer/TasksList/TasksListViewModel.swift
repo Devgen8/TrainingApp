@@ -14,7 +14,7 @@ import FirebaseAuth
 class TasksListViewModel {
     var theme: String?
     var tasks = [TaskModel]()
-    var usersSolvedTasks = [String]()
+    var usersSolvedTasks = [String:[String]]()
     var unsolvedTasks = [String:[String]]()
     let themeReference = Firestore.firestore().collection("trainer")
     let userReference = Firestore.firestore().collection("users")
@@ -22,6 +22,7 @@ class TasksListViewModel {
     var unsolvedTaskUpdater: UnsolvedTaskUpdater?
     
     func getTasks(completion: @escaping (Bool) -> ()) {
+        getUsersStats()
         guard let theme = theme else {
             completion(false)
             return
@@ -54,9 +55,9 @@ class TasksListViewModel {
     
     func getUsersStats() {
         if let userId = Auth.auth().currentUser?.uid {
-            userReference.document(userId).collection("tasks").document("trainer").getDocument { [weak self] (document, error) in
+            userReference.document(userId).getDocument { [weak self] (document, error) in
                 guard let `self` = self, error == nil else { return }
-                if let solvedTasks = document?.data()?["solvedTasks"] as? [String] {
+                if let solvedTasks = document?.data()?["solvedTasks"] as? [String:[String]] {
                     self.usersSolvedTasks = solvedTasks
                 }
             }
@@ -85,15 +86,17 @@ class TasksListViewModel {
         viewModel.task = tasks[index]
         viewModel.unsolvedTasks = unsolvedTasks
         viewModel.unsolvedTasksUpdater = self
+        viewModel.solvedTasks = usersSolvedTasks
     }
 }
 
 extension TasksListViewModel: UnsolvedTaskUpdater {
-    func updateUnsolvedTasks(with tasks: [String : [String]]) {
-        unsolvedTasks = tasks
+    func updateUnsolvedTasks(with unsolvedTasks: [String : [String]], and solvedTasks: [String : [String]]?) {
+        self.unsolvedTasks = unsolvedTasks
+        usersSolvedTasks = solvedTasks ?? [:]
         if lookingForUnsolvedTasks ?? false {
             self.tasks = self.tasks.filter({ unsolvedTasks[theme ?? ""]?.contains($0.name ?? "") ?? true })
         }
-        unsolvedTaskUpdater?.updateUnsolvedTasks(with: tasks)
+        unsolvedTaskUpdater?.updateUnsolvedTasks(with: unsolvedTasks, and: nil)
     }
 }

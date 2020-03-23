@@ -16,9 +16,9 @@ class BattleFinalViewController: UIViewController {
     @IBOutlet var opponentsAnswersImages: [UIImageView]!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var gamesNumberLabel: UILabel!
+    @IBOutlet weak var opponentsNameLabel: UILabel!
     
-    var userAnswers = [Int]()
-    var opponentsAnswers = [Int]()
+    var viewModel = BattleFinalViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,26 +28,21 @@ class BattleFinalViewController: UIViewController {
     func designScreenElements() {
         DesignService.setGradient(for: view)
         DesignService.designBlueButton(finishButton)
-        designResultLabel()
         setupScore()
         setupAnswersImages()
+        designResultLabel()
+        opponentsNameLabel.text = viewModel.getOpponentsName()
+        gamesNumberLabel.text = "\(viewModel.numberOfPlays ?? 2)"
     }
     
     func setupScore() {
-        var usersScore = 0
-        var opponentsScore = 0
-        for index in stride(from: 0, to: userAnswers.count, by: 1) {
-            usersScore += userAnswers[index]
-            opponentsScore += opponentsAnswers[index]
-        }
-        scoreLabel.text = "\(usersScore):\(opponentsScore)"
+        scoreLabel.text = viewModel.getScore()
     }
     
     func setupAnswersImages() {
-        let answers = [#imageLiteral(resourceName: "close"), #imageLiteral(resourceName: "checked")]
-        for index in stride(from: 0, to: userAnswers.count, by: 1) {
-            userAnswersImages[index].image = answers[userAnswers[index]]
-            opponentsAnswersImages[index].image = answers[opponentsAnswers[index]]
+        for index in stride(from: 0, to: viewModel.userAnswers.count, by: 1) {
+            userAnswersImages[index].image = viewModel.userAnswers[index] ? #imageLiteral(resourceName: "checked") : #imageLiteral(resourceName: "close")
+            opponentsAnswersImages[index].image = viewModel.opponentsAnswers[index] ? #imageLiteral(resourceName: "checked") : #imageLiteral(resourceName: "close")
         }
     }
     
@@ -67,8 +62,17 @@ class BattleFinalViewController: UIViewController {
         layer.bounds = shadows.bounds
         layer.position = shadows.center
         shadows.layer.addSublayer(layer)
-        resultLabel.textColor = UIColor(red: 0, green: 0.776, blue: 0.369, alpha: 0.99)
+        
+        let greenColor = UIColor(red: 0, green: 0.776, blue: 0.369, alpha: 0.99)
+        let redColor = UIColor(displayP3Red: 0.88, green: 0.23, blue: 0.23, alpha: 0.75)
+        if viewModel.wonBattle == nil || viewModel.wonBattle == true {
+            resultLabel.textColor = greenColor
+        } else {
+            resultLabel.textColor = redColor
+        }
+        resultLabel.text = viewModel.getResultPhrase()
     }
+    
     @IBAction func finishTapped(_ sender: UIButton) {
         view.window?.rootViewController?.dismiss(animated: true)
     }

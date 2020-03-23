@@ -22,6 +22,7 @@ class TaskViewModel {
     var isTaskUnsolved: Bool?
     var unsolvedTasks = [String:[String]]()
     var unsolvedTasksUpdater: UnsolvedTaskUpdater?
+    var solvedTasks = [String:[String]]()
     
     func checkAnswer(_ stringAnswer: String?) -> (Bool, String) {
         guard let answer = Float(stringAnswer ?? "") else {
@@ -44,6 +45,9 @@ class TaskViewModel {
         }
         
         if isTaskUnsolved == true {
+            if solvedTasks[theme]?.contains(unsolvedTask) ?? false {
+                solvedTasks[theme] = solvedTasks[theme]?.filter({ $0 != unsolvedTask })
+            }
             if unsolvedTasks[theme] == nil {
                 unsolvedTasks[theme] = [unsolvedTask]
             } else {
@@ -56,18 +60,26 @@ class TaskViewModel {
             if unsolvedTasks[theme]?.contains(unsolvedTask) ?? false {
                 unsolvedTasks[theme] = unsolvedTasks[theme]?.filter({ $0 != unsolvedTask })
             }
+            if solvedTasks[theme] == nil {
+                solvedTasks[theme] = [unsolvedTask]
+            } else {
+                if !(solvedTasks[theme]?.contains(unsolvedTask) ?? true) {
+                    solvedTasks[theme]?.append(unsolvedTask)
+                }
+            }
         }
         putTaskUnsolved()
     }
     
     func putTaskUnsolved() {
         if let userId = Auth.auth().currentUser?.uid {
-            usersReference.document(userId).setData(["unsolvedTasks" : unsolvedTasks])
+            usersReference.document(userId).updateData(["unsolvedTasks" : unsolvedTasks,
+                                                     "solvedTasks" : solvedTasks])
         }
     }
     
     func updateParentUnsolvedTasks() {
-        unsolvedTasksUpdater?.updateUnsolvedTasks(with: unsolvedTasks)
+        unsolvedTasksUpdater?.updateUnsolvedTasks(with: unsolvedTasks, and: solvedTasks)
     }
     
 //    func getUsersTask(completion: @escaping (TaskModel?) -> ()) {

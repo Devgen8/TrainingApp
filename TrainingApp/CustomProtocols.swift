@@ -9,7 +9,7 @@
 import Foundation
 
 protocol UnsolvedTaskUpdater {
-    func updateUnsolvedTasks(with tasks: [String:[String]])
+    func updateUnsolvedTasks(with unsolvedTasks: [String:[String]], and solvedTasks: [String:[String]]?)
 }
 
 protocol DataConstructer {

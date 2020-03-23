@@ -96,6 +96,11 @@
 		24FBF005242744D500BBB638 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FBF004242744D500BBB638 /* Animations.swift */; };
 		24FBF00724275B0100BBB638 /* UnsolvedTasksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FBF00624275B0100BBB638 /* UnsolvedTasksViewModel.swift */; };
 		24FBF0092427818600BBB638 /* BattleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FBF0082427818600BBB638 /* BattleViewModel.swift */; };
+		24FBF00E2427A2C900BBB638 /* AnswerChooserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FBF00D2427A2C900BBB638 /* AnswerChooserViewModel.swift */; };
+		24FBF0102427A3B900BBB638 /* BattleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FBF00F2427A3B900BBB638 /* BattleModel.swift */; };
+		24FBF0122427F60F00BBB638 /* BattleFinalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FBF0112427F60F00BBB638 /* BattleFinalViewModel.swift */; };
+		24FBF01524288E6700BBB638 /* GamesNumberAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FBF01324288E6700BBB638 /* GamesNumberAlertViewController.swift */; };
+		24FBF01624288E6700BBB638 /* GamesNumberAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24FBF01424288E6700BBB638 /* GamesNumberAlertViewController.xib */; };
 		81839BA7E4DB31FAA8ECD106 /* Pods_TrainingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24247019D4A55FB3DC6168FE /* Pods_TrainingApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -192,6 +197,11 @@
 		24FBF004242744D500BBB638 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		24FBF00624275B0100BBB638 /* UnsolvedTasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsolvedTasksViewModel.swift; sourceTree = "<group>"; };
 		24FBF0082427818600BBB638 /* BattleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleViewModel.swift; sourceTree = "<group>"; };
+		24FBF00D2427A2C900BBB638 /* AnswerChooserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerChooserViewModel.swift; sourceTree = "<group>"; };
+		24FBF00F2427A3B900BBB638 /* BattleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleModel.swift; sourceTree = "<group>"; };
+		24FBF0112427F60F00BBB638 /* BattleFinalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleFinalViewModel.swift; sourceTree = "<group>"; };
+		24FBF01324288E6700BBB638 /* GamesNumberAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesNumberAlertViewController.swift; sourceTree = "<group>"; };
+		24FBF01424288E6700BBB638 /* GamesNumberAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GamesNumberAlertViewController.xib; sourceTree = "<group>"; };
 		2FD19460FFC2435C62C524C4 /* Pods-TrainingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainingApp.release.xcconfig"; path = "Target Support Files/Pods-TrainingApp/Pods-TrainingApp.release.xcconfig"; sourceTree = "<group>"; };
 		70B737A677E15050CB9AB992 /* Pods-TrainingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainingApp.debug.xcconfig"; path = "Target Support Files/Pods-TrainingApp/Pods-TrainingApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -398,8 +408,12 @@
 			children = (
 				24FBF00C242798E100BBB638 /* BattleStart */,
 				24964379241BE5F100DC377C /* AnswerChooserViewController.swift */,
+				24FBF01324288E6700BBB638 /* GamesNumberAlertViewController.swift */,
+				24FBF01424288E6700BBB638 /* GamesNumberAlertViewController.xib */,
+				24FBF00D2427A2C900BBB638 /* AnswerChooserViewModel.swift */,
 				2496437A241BE5F100DC377C /* AnswerChooserViewController.xib */,
 				2496437E241F417900DC377C /* BattleFinalViewController.swift */,
+				24FBF0112427F60F00BBB638 /* BattleFinalViewModel.swift */,
 				2496437F241F417900DC377C /* BattleFinalViewController.xib */,
 			);
 			path = Battle;
@@ -430,6 +444,7 @@
 			children = (
 				24F95C1B24112A85002A92FD /* BattleViewController.swift */,
 				24FBF0082427818600BBB638 /* BattleViewModel.swift */,
+				24FBF00F2427A3B900BBB638 /* BattleModel.swift */,
 				24F95C1C24112A85002A92FD /* BattleViewController.xib */,
 			);
 			path = BattleStart;
@@ -565,6 +580,7 @@
 				249643632413B37700DC377C /* Montserrat-Bold.otf in Resources */,
 				249643522413B37700DC377C /* Montserrat-ExtraLight.otf in Resources */,
 				24F95BE423F5581C002A92FD /* TabBarViewController.xib in Resources */,
+				24FBF01624288E6700BBB638 /* GamesNumberAlertViewController.xib in Resources */,
 				249643742413B37800DC377C /* Montserrat-Light.ttf in Resources */,
 				2458FD6924210A130095E65F /* FormSheetViewController.xib in Resources */,
 				2458FD632420E8A80095E65F /* ImagePreviewViewController.xib in Resources */,
@@ -628,14 +644,18 @@
 				248F2FDF23F405DB007C98B5 /* WelcomeViewController.swift in Sources */,
 				2458FD72242260520095E65F /* TrainerModel.swift in Sources */,
 				2458FD7D2423C5290095E65F /* TasksListViewModel.swift in Sources */,
+				24FBF00E2427A2C900BBB638 /* AnswerChooserViewModel.swift in Sources */,
 				24F95BE823F55BD6002A92FD /* SignUpViewController.swift in Sources */,
 				24F95C1D24112A86002A92FD /* BattleViewController.swift in Sources */,
+				24FBF0122427F60F00BBB638 /* BattleFinalViewModel.swift in Sources */,
 				24F95BDE23F41398002A92FD /* SignInViewModel.swift in Sources */,
 				2458FD6C242207800095E65F /* ProfileViewController.swift in Sources */,
 				24964380241F417A00DC377C /* BattleFinalViewController.swift in Sources */,
 				24F95BEC23FAF01F002A92FD /* SignUpViewModel.swift in Sources */,
 				2458FD7724227D730095E65F /* TaskModel.swift in Sources */,
 				24F95C2124113B46002A92FD /* UIViewExtension.swift in Sources */,
+				24FBF0102427A3B900BBB638 /* BattleModel.swift in Sources */,
+				24FBF01524288E6700BBB638 /* GamesNumberAlertViewController.swift in Sources */,
 				24FBF005242744D500BBB638 /* Animations.swift in Sources */,
 				248F2FCA23F404DE007C98B5 /* AppDelegate.swift in Sources */,
 				2458FD7024225F550095E65F /* TrainerViewModel.swift in Sources */,

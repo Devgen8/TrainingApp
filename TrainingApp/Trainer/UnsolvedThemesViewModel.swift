@@ -24,7 +24,7 @@ extension UnsolvedThemesViewModel: DataConstructer {
 }
 
 extension UnsolvedThemesViewModel: UnsolvedTaskUpdater {
-    func updateUnsolvedTasks(with tasks: [String : [String]]) {
-        unsolvedTasks = tasks
+    func updateUnsolvedTasks(with unsolvedTasks: [String : [String]], and solvedTasks: [String : [String]]?) {
+        self.unsolvedTasks = unsolvedTasks
     }
 }

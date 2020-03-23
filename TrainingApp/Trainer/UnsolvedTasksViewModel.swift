@@ -36,6 +36,10 @@ extension UnsolvedTasksViewModel: DataConstructer {
 }
 
 extension UnsolvedTasksViewModel: UnsolvedTaskUpdater {
+    func updateUnsolvedTasks(with unsolvedTasks: [String : [String]], and solvedTasks: [String : [String]]?) {
+        
+    }
+    
     func updateUnsolvedTasks(with tasks: [String : [String]]) {
         unsolvedTasks = tasks
     }
